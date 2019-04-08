@@ -1,23 +1,11 @@
 window.addEventListener('load', () => {
-    // const isDay = false;
-    // console.log('onload  called');
-    // const calculatorHead = document.querySelectorAll('.calculator-container__head');
-    // const calHeadStyleElement = calculatorHead[0].style;
-    // calHeadStyleElement.backgroundSize = "cover";
-    // calHeadStyleElement.height = "200px";
-    // calHeadStyleElement.width = "500px";
-    // if(isDay) {
-    //     //console.log('tru;')
-    //     calHeadStyleElement.backgroundImage = "url(/bg.19f8c1d4.png)";        
-    // } else {
-    //     calHeadStyleElement.backgroundImage = "url(/Bitmap.f6dbe94f.png)";
-    // }
     changeMode();
     let isDay = true;
+    const changeModeSelector = document.querySelectorAll(".calculator-container__switch img");
     
-
+    let i = 0;
  function change() {
-  let i = 0;
+  
   var doc = document.body;
   var colorTop = ["#a1c4fd", "#a18cd1", "#fad0c4", "#fbc2eb"];
   var colorBottom = ["#c2e9fb","#fbc2eb", "#ffd1ff", "#a6c1ee"];
@@ -28,17 +16,8 @@ window.addEventListener('load', () => {
 setInterval(change, 1000);
 
 
-//   const calSwitch = document.querySelectorAll('.calculator-container__switch');
-//   const dayImage = `<img src="./assets/day_mode.png" />`;
-//   const nightImage = '<img src="./assets/night_mode.png" />';
-  
 
-  //calSwitch[0].append(dayImage);
-
-  const changeModeSelector = document.querySelectorAll(".calculator-container__switch img");
-  
    changeModeSelector[0].addEventListener('click', function() {
-       console.log('clicked');
        isDay = !isDay;
        changeMode(isDay,this);
    });
@@ -125,9 +104,6 @@ setInterval(change, 1000);
         changeBottomSelector[0].style.backgroundColor = "white";
         
         changeBottomButtonSelector.forEach((item,index) => {
-            // item.addEventListener('click', function() {
-            //     console.log(this.getAttribute("value"));
-            // })
             changeBottomButtonSelector[index].style.color = "black";
             changeBottomButtonSelector[index].style.backgroundImage = "background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);"
         })
@@ -145,11 +121,4 @@ setInterval(change, 1000);
     }
     
    }
-
-//    let buttonValues = [1,2,3,4,5,6,7,8,9,0];
-//    let customButtons = buttonValues.map((item,index) => 
-//     <button class="button ">{item}</button>
-//    );
-//    const buttonHolder = document.querySelectorAll('.calculator-container__bottom');
-//     buttonHolder[0].append(customButtons);
 });
