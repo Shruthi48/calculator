@@ -98,7 +98,7 @@ setInterval(change, 1000);
                     if (resArray.length==0) return;
                     //console.log(leftOperand);
                     //console.log('parseFloat(leftOperand.join())', parseFloat(leftOperand.join()));
-                    result = eval(leftOperand.join()+ sym +resArray.join());
+                    result = eval(parseFloat(leftOperand.join(''))+ sym + parseFloat(resArray.join('')));
                     res.append(result);
                 }
                 break;
