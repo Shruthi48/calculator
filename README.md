@@ -1,3 +1,3 @@
 # calculator
-npm install parcel-bundler
+<p>npm install parcel-bundler</p> <br>
 parcel index.html
