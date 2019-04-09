@@ -2,4 +2,4 @@
 <p>npm install parcel-bundler</p> <br>
 parcel index.html
 
-![img](http://i.imgur.com/yourfilename.png)
+![img](https://github.com/Shruthi48/calculator/blob/master/Screen%20Shot%202019-04-09%20at%208.47.39%20AM.png)
