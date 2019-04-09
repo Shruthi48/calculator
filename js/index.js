@@ -39,27 +39,10 @@ setInterval(change, 1000);
           let result;
             console.log(this.getAttribute("value"));
             switch(this.getAttribute("value")) {
-                case '+': {
-                    sym = this.getAttribute("value");
-                    leftOperand = resArray.splice(0,resArray.length);
-                    console.log(leftOperand);             
-                }
-                break;
-                case '-': {
-                    sym = this.getAttribute("value");
-                    leftOperand = resArray.splice(0,resArray.length);                 
-                }
-                break;
-                case '*': {
-                    sym = this.getAttribute("value");
-                    leftOperand = resArray.splice(0,resArray.length);                 
-                }
-                break;
-                case '/': {
-                    sym = this.getAttribute("value");
-                    leftOperand = resArray.splice(0,resArray.length);                 
-                }
-                break;
+                case '+': 
+                case '-':               
+                case '*': 
+                case '/': 
                 case '%': {
                     sym = this.getAttribute("value");
                     leftOperand = resArray.splice(0,resArray.length);                 
@@ -91,7 +74,7 @@ setInterval(change, 1000);
         })
     });
 
-    ////this code is repetative !! Would use a map to check the conditions based on symbol value, needs optimization
+    ////this code is repetative !!  needs optimization
 
 
     const calHeadStyleElement = calculatorHead[0].style;
